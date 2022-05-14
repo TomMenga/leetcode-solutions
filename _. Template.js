@@ -4,7 +4,7 @@
 
  class Test {
 
-  method(nums, target) {
+  method(par1) {
     
   }
 }
@@ -17,7 +17,7 @@ const testCase = [
 
 testCase.forEach(testCase => {
   console.log('Executing test', testCase);
-  const result = testExecutor.method(testCase.nums, testCase.target);
+  const result = testExecutor.method(testCase.par1);
   console.log('Result:', result);
   console.assert(result === testCase.result);
 })
