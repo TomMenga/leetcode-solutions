@@ -32,6 +32,10 @@
       }
     }
 
+    if (bracketsStack.length > 0) {
+      return false;
+    }
+
     return true;
   }
 
@@ -52,6 +56,7 @@ const testCase = [
   {par1: '[](){}', result: true},
   {par1: '[(]){}', result: false},
   {par1: '([]){}', result: true},
+  {par1: '([](){}', result: false},
 ];
 
 testCase.forEach(testCase => {
