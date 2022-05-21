@@ -3,7 +3,6 @@ import * as Utils from './Utils.js';
 /**
  * Description
  */
-
  class Test {
 
   method(par1) {
