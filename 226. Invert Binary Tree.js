@@ -1,7 +1,8 @@
+import { toOrderedTree, treeToArray } from "./Utils";
+
 /**
  * Given the root of a binary tree, invert the tree, and return its root.
  */
-
  class Test {
 
   /**
@@ -29,37 +30,6 @@
   }
 }
 
-
-
-var toOrderedTree = function(list) {
-  var f = function insertBinTree (t = {value: void 0, left: void 0, right: void 0}, n){
-    t.value !== void 0 
-      ? t.value > n 
-        ? t.left = insertBinTree(t.left,n)
-        : t.right = insertBinTree(t.right,n)
-      : t.value = n;
-    return t;
-  }
-  
-  return list.reduce(f, void 0);
-}
-
-var toArray = function (root) {
-  const res = [];
-
-  const queue = [root];
-
-  while(queue.length !== 0) {
-    const node = queue.pop();
-    if (node) {
-      res.push(node.value);
-      queue.unshift(...[node.right, node.left])
-    }
-  }
-
-  return res;
-}
-
 const testExecutor = new Test();
 
 const testCase = [
@@ -70,6 +40,6 @@ const testCase = [
 testCase.forEach(testCase => {
   console.log('Executing test', testCase);
   const result = testExecutor.invertTree(toOrderedTree(testCase.par1));
-  console.log('Result:', toArray(result));
-  console.assert(toArray(result).every((el, i) => testCase.result[i] === el));
+  console.log('Result:', treeToArray(result));
+  console.assert(treeToArray(result).every((el, i) => testCase.result[i] === el));
 })

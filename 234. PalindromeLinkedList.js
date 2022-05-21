@@ -1,9 +1,11 @@
+import { toLinkedList } from "./Utils";
+
 class Test {
 
   /**
    * Definition for singly-linked list.
    * function ListNode(val, next) {
-   *     this.val = (val===undefined ? 0 : val)
+   *     this.value = (val===undefined ? 0 : val)
    *     this.next = (next===undefined ? null : next)
    * }
    */
@@ -18,7 +20,7 @@ class Test {
     let node = head;
     
     while (node) {
-      stack.push(node.val);
+      stack.push(node.value);
       node = node.next;
     }
 
@@ -26,7 +28,7 @@ class Test {
     node = head;
 
     while (poppedValue !== undefined) {
-      result = result && poppedValue === node.val;
+      result = result && poppedValue === node.value;
 
       node = node.next;
       poppedValue = stack.pop();
@@ -36,22 +38,6 @@ class Test {
     return result;
   }
 
-}
-
-var toLinkedList = function(list) {
-  let head = {};
-  let node = head;
-
-  for(i in list) {
-    node.val = list[i];
-
-    if (i < list.length-1) {
-      const newNode = {};
-      node.next = newNode;
-      node = newNode;
-    }
-  }
-  return head;
 }
 
 var testCase = toLinkedList([1,0,0]);
