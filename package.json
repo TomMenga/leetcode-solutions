@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TomMenga/leetcode-solutions/issues"
   },
-  "homepage": "https://github.com/TomMenga/leetcode-solutions#readme"
+  "homepage": "https://github.com/TomMenga/leetcode-solutions#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
