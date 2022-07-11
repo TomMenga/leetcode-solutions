@@ -13,6 +13,43 @@ export function toOrderedBinaryTree(nodesList) {
 }
 
 /**
+ * Fill a binary tree following breadth-first left to right order
+ */
+export function toBinaryTree(nodesList) {
+  const root = {
+    value: nodesList[0]
+  };
+  const nodesQueue = [root];
+
+  for (let i = 1; i < nodesList.length; i++) {
+    const nodeToFill = nodesQueue[0];
+
+    // If left is empty
+    if (nodeToFill.left?.value === undefined) {
+      nodeToFill.left = {
+        value: nodesList[i]
+      };
+      nodesQueue.push(nodeToFill.left);
+
+      continue;
+    }
+
+    // If right is empty
+    if (nodeToFill.right?.value === undefined) {
+      nodeToFill.right = {
+        value: nodesList[i]
+      };
+      nodesQueue.push(nodeToFill.right);
+      nodesQueue.shift();
+
+      continue;
+    }
+  }
+
+  return root;
+}
+
+/**
  * Transform a tree in an array.
  * The order of the elements follows the breadth first approach
  * @param {*} root The root of the tree 
