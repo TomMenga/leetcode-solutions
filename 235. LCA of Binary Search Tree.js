@@ -30,7 +30,7 @@ const testCase = [
 
 testCase.forEach(testCase => {
   console.log('Executing test', testCase);
-  const result = testExecutor.findLowestCommonAncestor(Utils.toOrderedTree(testCase.tree), testCase.p, testCase.q);
+  const result = testExecutor.findLowestCommonAncestor(Utils.toOrderedBinaryTree(testCase.tree), testCase.p, testCase.q);
   console.log('Result:', result);
   console.assert(result === testCase.result);
 })

@@ -1,6 +1,6 @@
 
 
-export function toOrderedTree(list) {
+export function toOrderedBinaryTree(nodesList) {
   var f = function insertBinTree (t = {value: void 0, left: void 0, right: void 0}, n){
     t.value !== void 0 
       ? t.value > n 
@@ -9,7 +9,7 @@ export function toOrderedTree(list) {
       : t.value = n;
     return t;
   }
-  return list.reduce(f, void 0);
+  return nodesList.reduce(f, void 0);
 }
 
 /**
