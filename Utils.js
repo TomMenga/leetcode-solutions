@@ -82,7 +82,7 @@ export function toLinkedList(list) {
   let head = {};
   let node = head;
 
-  for(i in list) {
+  for(let i in list) {
     node.value = list[i];
 
     if (i < list.length-1) {
