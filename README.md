@@ -1,10 +1,10 @@
 # LeetCode Solutions
 
-It's not the first and probably won't be the last repository of solutions to LeetCode problems.  
+Not the first and probably not the last repository of solutions to LeetCode problems.  
 At the moment, it is though as a personal use repo to train for tech-interview questions.
 
 The chosen language is **Javascript** and will probably be used for the majority of the solutions.  
-I'd rather use typescript, however some suggested to get used to Js for the interview.
+I'd rather use typescript but not every company allows it for the interview :(
 
 Feel free to **consult** or **contribute**.
 
