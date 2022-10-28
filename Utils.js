@@ -105,3 +105,7 @@ export function linkedListToArray(linkedList) {
 
   return result;
 }
+
+export function arrayAreEquals(array1, array2) {
+  return array1.reduce((res, item, i) => res && array1[i] === array2[i] , true)
+}
