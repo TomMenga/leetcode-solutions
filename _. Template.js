@@ -16,8 +16,8 @@ const testCase = [
   {par1: 'foe', result: true},
 ];
 
-testCase.forEach(testCase => {
-  console.log('Executing test', testCase);
+testCase.forEach((testCase, i) => {
+  console.log(`Executing test n° ${i+1}`, testCase);
   const result = testExecutor.method(testCase.par1);
   console.log('Result:', result);
   console.assert(result === testCase.result);
