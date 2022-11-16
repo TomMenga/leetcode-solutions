@@ -109,3 +109,7 @@ export function linkedListToArray(linkedList) {
 export function arrayAreEquals(array1, array2) {
   return array1.reduce((res, item, i) => res && array1[i] === array2[i] , true)
 }
+
+export function matrixAreEquals(matrix1, matrix2) {
+  return matrix1.reduce((res, item, i) => res && arrayAreEquals(matrix1[i], matrix2[i]) , true)
+}
